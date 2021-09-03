@@ -4,6 +4,8 @@ function Nav(props) {
     const {
         contactSelected,
         setContactSelected,
+        projectsSelected,
+        setProjectsSelected,
     } = props;
 
 
@@ -24,9 +26,8 @@ function Nav(props) {
                     <li className={`mx-2 ${contactSelected && 'navActive'}`}>
                         <span onClick={() => setContactSelected(true)}>Contact</span>
                     </li>
-                    <li>
-                        <span>Projects</span>
-                        {/* use switch-case / to switch pages */}
+                    <li className={`mx-2 ${projectsSelected && 'navActive'}`}>
+                        <span onClick={() => setProjectsSelected(true)}>Projects</span>
                     </li>
                     <li>
                         <span>Resume</span>
