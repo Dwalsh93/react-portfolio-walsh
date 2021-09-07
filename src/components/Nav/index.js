@@ -2,10 +2,7 @@ import React from 'react';
 
 function Nav(props) {
     const {
-        contactSelected,
-        setContactSelected,
-        projectsSelected,
-        setProjectsSelected,
+        page, setPage
     } = props;
 
 
@@ -18,19 +15,17 @@ function Nav(props) {
             </h2>
             <nav>
                 <ul className="flex-row">
-                    <li className="mx-2">
-                        <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
-                            About me
-                        </a>
+                    <li className={`mx-2 ${page === "About" && 'navActive'}`} onClick={() => setPage("About")}>
+                        About me
                     </li>
-                    <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-                        <span onClick={() => setContactSelected(true)}>Contact</span>
+                    <li className={`mx-2 ${page === "Contact" && 'navActive'}`} onClick={() => setPage("Contact")} >
+                        Contact
                     </li>
-                    <li className={`mx-2 ${projectsSelected && 'navActive'}`}>
-                        <span onClick={() => setProjectsSelected(true)}>Projects</span>
+                    <li className={`mx-2 ${page === "Projects" && 'navActive'}`} onClick={() => setPage("Projects")} >
+                        Projects
                     </li>
                     <li>
-                        <span>Resume</span>
+                        <span><a href="https://github.com/Dwalsh93/dwresume/raw/main/Dillon%20Walsh-Resume-V2%20(1).pdf">Resume</a></span>
                     </li>
                     <li>
                         <span><a href="https://github.com/Dwalsh93">GitHub</a></span>

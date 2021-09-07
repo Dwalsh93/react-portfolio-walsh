@@ -3,44 +3,27 @@ import Nav from './components/Nav';
 import About from './components/About';
 import ContactForm from './components/Contact';
 import Projects from './components/Projects';
-
-
-// import '@fortawesome/fontawesome-free/css/all.min.css'; import
-// 'bootstrap-css-only/css/bootstrap.min.css'; import
-// 'mdbreact/dist/css/mdb.css';
-
+import Cards from './components/Cards';
+import Footer from './components/Footer';
 
 function App() {
-  const [contactSelected, setContactSelected] = useState(true);
-  const [projectsSelected, setProjectsSelected] = useState(true);
+  const [page, setPage] = useState("About");
 
-  // render() {
-  //   if (contactSelected) {
-  //     return <ContactForm></ContactForm>;
-  //   } else if (projectsSelected) {
-  //     <Projects></Projects>
-  //   }
-  //   else {
-  //     return <About></About>
-  //   }
-  // }
+  const renderPage = () => {
+    if (page === "About") return <About />
+    if (page === "Contact") return <ContactForm />
+    if (page === "Projects") return <Cards />
+  }
 
   return (
     <div>
       <Nav
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-        projectsSelected={projectsSelected}
-        setProjectsSelected={setProjectsSelected}
-      ></Nav>
+        page={page}
+        setPage={setPage}
+      />
       <main>
-        {!contactSelected ? (
-          <>
-            <About></About>
-          </>
-        ) : (
-          <ContactForm></ContactForm>
-        )}
+        {renderPage()}
+        <Footer></Footer>
       </main>
     </div>
   );

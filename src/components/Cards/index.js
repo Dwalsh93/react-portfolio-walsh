@@ -1,17 +1,31 @@
 import React from 'react';
-import '@fortawesome/fontawesome-free/css/all.min.css'; import
-'bootstrap-css-only/css/bootstrap.min.css'; import
-'mdbreact/dist/css/mdb.css';
+import projects from "../../project.json";
+import { Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
+import './style.css'
 
-<Card style={{ width: '18rem' }}>
-  <Card.Body>
-    <Card.Title>Card Title</Card.Title>
-    <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-    <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
-    </Card.Text>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
-  </Card.Body>
-</Card>
+
+export default function Project(props) {
+    return (
+      <section id="projects">
+        <h2 className="top-title">Portfolio</h2>
+        <div>
+          <div class="d-flex justify-content-between">
+            {projects.map((project) => (
+          <Card style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={project.image} alt={project.title} />
+           <Card.Body>
+             <Card.Title>{project.title}</Card.Title>
+              <Card.Text>
+                {project.subtitle}
+             </Card.Text>
+           <Button variant="primary" href={project.link}>Visit Site</Button>
+           <Button variant="secondary" href={project.github}>Github</Button>
+          </Card.Body>
+        </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
