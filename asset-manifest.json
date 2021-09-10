@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-portfolio-walsh/static/css/main.1c8edcc6.chunk.css",
+    "main.js": "/react-portfolio-walsh/static/js/main.0d0eea4f.chunk.js",
+    "main.js.map": "/react-portfolio-walsh/static/js/main.0d0eea4f.chunk.js.map",
+    "runtime-main.js": "/react-portfolio-walsh/static/js/runtime-main.4de1c4a1.js",
+    "runtime-main.js.map": "/react-portfolio-walsh/static/js/runtime-main.4de1c4a1.js.map",
+    "static/js/2.0a513f62.chunk.js": "/react-portfolio-walsh/static/js/2.0a513f62.chunk.js",
+    "static/js/2.0a513f62.chunk.js.map": "/react-portfolio-walsh/static/js/2.0a513f62.chunk.js.map",
+    "static/js/3.4f680263.chunk.js": "/react-portfolio-walsh/static/js/3.4f680263.chunk.js",
+    "static/js/3.4f680263.chunk.js.map": "/react-portfolio-walsh/static/js/3.4f680263.chunk.js.map",
+    "index.html": "/react-portfolio-walsh/index.html",
+    "static/css/main.1c8edcc6.chunk.css.map": "/react-portfolio-walsh/static/css/main.1c8edcc6.chunk.css.map",
+    "static/js/2.0a513f62.chunk.js.LICENSE.txt": "/react-portfolio-walsh/static/js/2.0a513f62.chunk.js.LICENSE.txt",
+    "static/media/cover-image.0c99a3f2.png": "/react-portfolio-walsh/static/media/cover-image.0c99a3f2.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4de1c4a1.js",
+    "static/js/2.0a513f62.chunk.js",
+    "static/css/main.1c8edcc6.chunk.css",
+    "static/js/main.0d0eea4f.chunk.js"
+  ]
+}
